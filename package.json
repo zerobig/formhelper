@@ -1,0 +1,10 @@
+{
+  "name": "formhelper",
+  "version": "0.3.0",
+  "scripts": {
+    "build": "npm run build:extension",
+    "build:extension": "cd scripts && ext2cfe.cmd ../src ../dist/formhelper.cfe formhelper"
+  },
+  "author": "Nikita Ivanchenko",
+  "license": "MIT"
+}
