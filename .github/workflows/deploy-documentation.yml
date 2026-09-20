@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Скачивание BSL-Doc
-        run: curl -L https://github.com/alkoleft/bsldoc/releases/download/0.1.0/bsldoc-0.1.0.jar --output ./bsldoc.jar && chmod +7 ./bsldoc.jar
+        run: curl -L https://github.com/alkoleft/bsldoc/releases/download/0.1.0/bsldoc-0.1.5.jar --output ./bsldoc.jar && chmod +7 ./bsldoc.jar
 
       - name: Генерация описания API
         run: java -jar ./bsldoc.jar ./../src ./api -f Docusaurus -s РаботаСФормами
