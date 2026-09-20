@@ -1,12 +1,22 @@
 # formhelper
 
-[![OpenYellow](https://img.shields.io/endpoint?url=https://openyellow.org/data/badges/1/534443720.json)](https://openyellow.org/grid?data=top&repo=534443720)
+[![OpenYellow](https://openyellow.openintegrations.dev/data/badges/905129528.svg)](https://openyellow.org/grid?filter=top&repo=905129528)
 
 Библиотека для программного управления элементами формы.
 
-В составе расширение, и файл с шаблонами кода.
+## Документация
 
-Вот небольшой пример.
+- [Почитать на GH Pages](https://zerobig.github.io/formhelper/)
+- [Статья автора проекта Nikita Ivanchenko на Инфорстарт](https://infostart.ru/public/1979960/)
+
+## Состав репозитория
+
+- ./src - исходный код расширения для 1С Предприятия 8;
+- ./docs - документация;
+- ./tools - шаблоны кода. [Использование шаблонов кода 1С](https://its.1c.ru/db/metod8dev/content/2283/hdoc);
+- ./scripts - скрипт для сборки расширения 1С Предприятия 8 из исходного кода.
+
+## Пример использования
 
 ```bsl
 &НаСервере
@@ -65,4 +75,7 @@
 КонецПроцедуры
 ```
 
-![](https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg)[Статья](https://infostart.ru/public/1979960/) 
+## Благодарности
+
+- [YAxUnit](https://github.com/bia-technologies/yaxunit) - ребята, вы лучшие!
+- [1CFilesConverter](https://github.com/arkuznetsov/1CFilesConverter) - давно пользуюсь этими скриптами. Очень помогают.
