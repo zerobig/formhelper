@@ -23,11 +23,17 @@ jobs:
       - name: Извлечение исходников
         uses: actions/checkout@v4
 
-      - name: Скачивание BSL-Doc
-        run: curl -L https://github.com/alkoleft/bsldoc/releases/download/0.1.0/bsldoc-0.1.5.jar --output ./bsldoc.jar && chmod +7 ./bsldoc.jar
+      - name: Установка OneScript
+        run: |
+          sudo apt-get update && sudo apt-get install -y mono-complete
+          wget https://github.com
+          mono ovm.exe install stable
+          mono ovm.exe use stable
+          # Добавляем oscript в PATH для текущего окружения
+          echo "$HOME/.ovm/current/bin" >> $GITHUB_PATH
 
       - name: Генерация описания API
-        run: java -jar ./bsldoc.jar ./../src ./api -f Docusaurus -s РаботаСФормами
+        run: oscript ./../scripts/genegenerate-md.os ./../src ./api
 
       - name: Установка NodeJS
         uses: actions/setup-node@v4
