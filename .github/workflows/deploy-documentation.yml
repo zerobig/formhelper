@@ -21,12 +21,12 @@ jobs:
 
     steps:
       - name: Извлечение исходников
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: Установка OneScript
         uses: otymko/setup-onescript@v1.5.1
         with:
-          onescript-version: 1.9.2
+          version: 1.9.2
 
       - name: Генерация описания API
         run: oscript ./../scripts/genegenerate-md.os ./../src ./api
