@@ -24,13 +24,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Установка OneScript
-        run: |
-          sudo apt-get update && sudo apt-get install -y mono-complete
-          wget https://github.com
-          mono ovm.exe install stable
-          mono ovm.exe use stable
-          # Добавляем oscript в PATH для текущего окружения
-          echo "$HOME/.ovm/current/bin" >> $GITHUB_PATH
+        uses: otymko/setup-onescript@v1.4
+        with:
+          onescript-version: 'stable'
 
       - name: Генерация описания API
         run: oscript ./../scripts/genegenerate-md.os ./../src ./api
